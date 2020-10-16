@@ -18,6 +18,10 @@ public class Main {
         while (threadShop2.isAlive());
         while (threadShop3.isAlive());
 
-        System.out.println("Общая выручка составила: " + Shop.revenue.get());
+
+        System.out.println("Магазин 1 выручка составила: " + shop1.getRevenue());
+        System.out.println("Магазин 2 выручка составила: " + shop2.getRevenue());
+        System.out.println("Магазин 3 выручка составила: " + shop3.getRevenue());
+        System.out.println("Общая выручка составила: " + (shop1.getRevenue() + shop2.getRevenue() + shop3.getRevenue()));
     }
 }
