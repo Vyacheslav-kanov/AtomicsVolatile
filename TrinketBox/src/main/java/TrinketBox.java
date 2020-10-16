@@ -1,9 +1,12 @@
 public class TrinketBox {
 
-   static volatile boolean toggle = true;
-   static TrinketBox trinket = new TrinketBox();
+   static private volatile boolean toggle = true;
 
-   synchronized void set(boolean value){
-      toggle = value;
+   public static boolean isToggle() {
+      return toggle;
+   }
+
+   public static void setToggle(boolean toggle) {
+      TrinketBox.toggle = toggle;
    }
 }

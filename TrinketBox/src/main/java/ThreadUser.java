@@ -6,9 +6,12 @@ public class ThreadUser extends Thread{
 
         try {
             for (int i = 0; i < 10; i++){
-                User.user.waiting();
-                Toy.toy.awaking();
+                while (TrinketBox.isToggle());
+                Thread.sleep(1000);
+                TrinketBox.setToggle(true);
+                System.out.println(Thread.currentThread().getName() + " включил тринкет!");
             }
+        } catch (InterruptedException e) {
         } finally {
             System.out.println(Thread.currentThread().getName() + " Поток завершен!");
         }

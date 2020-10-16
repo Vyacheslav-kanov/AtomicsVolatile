@@ -12,6 +12,7 @@ public class Main {
         toy.start();
 
         while (user.isAlive()) continue;
+        threadToy.interrupt();
         toy.interrupt();
     }
 }
