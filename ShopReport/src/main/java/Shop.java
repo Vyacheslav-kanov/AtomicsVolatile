@@ -4,11 +4,11 @@ import java.util.concurrent.atomic.LongAdder;
 
 public class Shop extends Thread {
 
-    private LongAdder revenue = new LongAdder();
-    static private final Random rand = new Random();
+    private LongAdder revenue;
+    private final Random rand = new Random();
 
-    public long getRevenue() {
-        return revenue.sum();
+    public Shop(LongAdder revenue) {
+        this.revenue = revenue;
     }
 
     @Override
